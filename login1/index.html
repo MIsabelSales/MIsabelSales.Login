@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>Login1</title>
+  <base href="https://MIsabelSales.github.io/Login/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<style>*{margin:0;padding:0;}body{display:flex;height:100vh;width:100%;align-items:center;justify-content:center;background:linear-gradient(45deg,#0000004d,#00000080);background-size:cover;background-position:50%;}</style><link rel="stylesheet" href="styles.1301418e4421fdaed717.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.1301418e4421fdaed717.css"></noscript></head>
+
+
+<body id="unsplashImage">
+<script>
+  /* NO MOVER */
+ let endpoint = 'https://api.unsplash.com/photos/random/?client_id=2b2I8m3_FD0QTFCHKX01WPTih67ZFbW8gTZbLumaT9Q';
+
+fetch(endpoint)
+  .then
+  (function (response) {
+    return response.json();
+  })
+  .then(function(jsonData){
+    let urli=jsonData.urls.regular;
+    console.log(jsonData);
+    document.getElementById('unsplashImage').setAttribute("style", "background: url(" + urli + ");background-repeat: no-repeat center fixed;background-size: cover;");
+  })
+
+  /* NO MOVER */
+  </script>
+  <app-root></app-root>
+<script src="runtime.94a3db115089017c028d.js" defer></script><script src="polyfills.41f6577f8e083cb49acf.js" defer></script><script src="main.20058fe4cd7b634ed6a4.js" defer></script>
+
+</body></html>
