@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login1</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+
+
+<body id="unsplashImage">
+<script>
+  /* NO MOVER */
+ let endpoint = 'https://api.unsplash.com/photos/random/?client_id=LY3MOq74192zkLeq4Z6Z5EU9hO1MCCa-umhwjYH75oo';
+
+fetch(endpoint)
+  .then
+  (function (response) {
+    return response.json();
+  })
+  .then(function(jsonData){
+    let urli=jsonData.urls.regular;
+    console.log(jsonData);
+    document.getElementById('unsplashImage').setAttribute("style", "background: url(" + urli + ");background-repeat: no-repeat center fixed;background-size: cover;");
+  })
+
+  /* NO MOVER */
+  </script>
+  <app-root></app-root>
+</body>
+</html>

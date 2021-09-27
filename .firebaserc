@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "login-858e9": {
+      "hosting": {
+        "login1": [
+          "login-858e9"
+        ]
+      }
+    }
+  }
+}

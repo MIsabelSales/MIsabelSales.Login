@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="title">
+        <h1>Código de verificación</h1>
+      </div>
+
+      <div class="form">
+        <div class="input-area">
+          <!-- Telefono -->
+          <input placeholder="Telefono" #telefono type="text" autocomplete="off" required>
+          <label>Teléfono</label>
+
+
+        </div>
+        <div class="input-area">
+          <input placeholder="Codigo" #codigo type="text">
+          <label>Código</label>
+        </div>
+
+
+
+        <div class="button-area">
+          <button (click)="mandarCodigo(telefono.value)">Enviar código</button>
+        </div>
+        <div class="button-area">
+          <button (click)="auth.verificarCodigo(codigo.value)">Verificar e iniciar</button>
+        </div>
+        <div class="button-area" id="recaptcha-container"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+<router-outlet></router-outlet>
