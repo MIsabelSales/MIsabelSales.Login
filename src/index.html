@@ -11,23 +11,23 @@
 
 
 <body id="unsplashImage">
-<script>
-  /* NO MOVER */
- let endpoint = 'https://api.unsplash.com/photos/random/?client_id=2b2I8m3_FD0QTFCHKX01WPTih67ZFbW8gTZbLumaT9Q';
-
-fetch(endpoint)
-  .then
-  (function (response) {
-    return response.json();
-  })
-  .then(function(jsonData){
-    let urli=jsonData.urls.regular;
-    console.log(jsonData);
-    document.getElementById('unsplashImage').setAttribute("style", "background: url(" + urli + ");background-repeat: no-repeat center fixed;background-size: cover;");
-  })
-
-  /* NO MOVER */
-  </script>
+  <script>
+    /* NO MOVER */
+   let endpoint = 'https://api.unsplash.com/photos/random/?client_id=2b2I8m3_FD0QTFCHKX01WPTih67ZFbW8gTZbLumaT9Q';
+  
+  fetch(endpoint)
+    .then
+    (function (response) {
+      return response.json();
+    })
+    .then(function(jsonData){
+      let urli=jsonData.urls.regular;
+      console.log(jsonData);
+      document.getElementById('unsplashImage').setAttribute("style", "background: url(" + urli + ");background-repeat: no-repeat center fixed;background-size: cover;");
+    })
+  
+    /* NO MOVER */
+    </script>
   <app-root></app-root>
 </body>
 </html>
