@@ -6,6 +6,8 @@ import { environment } from 'src/environments/environment';
 import { async } from '@angular/core/testing';
 
 //crear de forma global una interface
+let comprobacion=1;
+
 declare global {
   interface Window {
     recaptchaVerifier: firebase.auth.RecaptchaVerifier;
@@ -26,9 +28,15 @@ export class AuthService {
     /* this.auth.authState.subscribe(user =>{
       console.log(user);
       if(!user){
+
         return;
       }
-      this.router.navigate(['/codigo-cel']);
+      if(comprobacion==1){
+        this.router.navigate(['/codigo-cel']);
+      }else if(comprobacion=2){
+        this.router.navigate(['/dashboard']);
+      }
+
     }); */
 
   }
@@ -92,6 +100,7 @@ export class AuthService {
     try {
       this.auth.signOut();
         this.router.navigate(['/login']);
+        comprobacion=1;
     } catch (e: any) {
       alert(e.message);
     }
@@ -112,6 +121,7 @@ export class AuthService {
       let credenciales = firebase.auth.PhoneAuthProvider.credential(window.confirmationResult.verificationId, codigo);
       this.auth.signInWithCredential(credenciales);
       this.router.navigate(['/dashboard']);
+      comprobacion=2;
     });
   }
 }

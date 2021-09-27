@@ -20,15 +20,21 @@
           <input placeholder="Teléfono" #telefono type="text" autocomplete="off" required value="+51">
           <label for="email">Teléfono</label>
         </div>
-        <div class="button-area">
-          <button (click)="mandarCodigo(telefono.value)" type="submit">Enviar código</button>
+
+        <div class="button-area" style="margin-top: 5%;">
+          <div  align="center" id="recaptcha-container">
+          </div>
+        </div>
+
+        <div class="button-area" style="margin-top: 15%;">
+          <button (click)="mandarCodigo(telefono.value)" >Enviar código</button>
 
         </div>
         <div class="button-area">
 
-          <button routerLink="/login" routerLinkActive="Active" type="submit">Cancelar</button>
+          <button routerLink="/login" routerLinkActive="Active" >Cancelar</button>
         </div>
-        <div class="button-area" id="recaptcha-container"></div>
+
       </div>
     </div>
   </div>

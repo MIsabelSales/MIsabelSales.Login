@@ -13,14 +13,16 @@
       <div class="title">
         <h1>Código de verificación</h1>
       </div>
-
       <div class="form">
         <div class="input-area">
           <input placeholder="Codigo" #codigo type="text">
           <label>Código</label>
         </div>
-
-        <div class="button-area">
+        <!-- <div class="button-area" style="margin-top: 5%;">
+          <div align="center" id="recaptcha-container">
+          </div>
+        </div> -->
+        <div class="button-area" style="margin-top: 15%;">
           <button (click)="auth.verificarCodigo(codigo.value)">Verificar e iniciar</button>
         </div>
 
@@ -28,7 +30,6 @@
           <button routerLink="/codigo-cel" routerLinkActive="Active">Regresar a introducir celular</button>
         </div>
 
-        <div class="button-area" id="recaptcha-container"></div>
       </div>
     </div>
   </div>
