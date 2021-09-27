@@ -13,7 +13,7 @@ export const environment = {
     appId: "1:33580538616:web:d12e407c9e0b7ebb9eb90d",
     measurementId: "G-4YZ5MENCEX"
   },
-  host:"http://localhost:4200/"
+  host:"https://MIsabelSales.github.io/"
 };
 
 /*
